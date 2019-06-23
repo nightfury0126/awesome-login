@@ -5,13 +5,15 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return MaterialApp(
+      home: Homepage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
 class Homepage extends StatefulWidget {
+
   @override
   _HomepageState createState() => _HomepageState();
 }
@@ -19,8 +21,9 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+
     );
   }
+
 }
