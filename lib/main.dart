@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -32,13 +33,35 @@ class _HomepageState extends State<Homepage> {
 
         children: <Widget>[
           Container(
+            
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5)
             
             ),
             padding: EdgeInsets.only(left: 30, right: 30),
-            child: TextField(
-              textInputAction: TextInputAction.send,
+            child: Stack(
+              children: <Widget>[
+                TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    labelText: 'Username',
+                    hintText: ' please writer your name here',
+                    hintStyle: TextStyle(color: Colors.grey.withOpacity(0.5))
+
+                  ),
+            
+            ),
+            SizedBox(height:100),
+            TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    hintText: ' please writer your password here',
+                    hintStyle: TextStyle(color: Colors.grey.withOpacity(0.5))
+                  ),
+            
+            ),
+              ],
             ),
           )
           
